@@ -31,7 +31,7 @@ console.log(User.eid);
 User.greet();
 
 const max = new User();
-max.firstName = 'Max';
+max.firstName = 'Paras';
 max.lastName = '';
 // max._firstName = 'Max 2';
 console.log(max.fullName);
@@ -39,7 +39,7 @@ console.log(max.fullName);
 class Employee extends User {
   constructor(public jobTitle: string) {
     super();
-    // super.firstName = 'Max';
+  //super.firstName = 'Max';
   }
 
   work() {
