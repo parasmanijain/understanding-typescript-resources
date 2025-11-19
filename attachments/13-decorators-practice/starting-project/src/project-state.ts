@@ -1,4 +1,4 @@
-import { Project, ProjectStatus } from "./common.js";
+import { Project, ProjectStatus } from "./index.js";
 
 export type Listener<T> = (items: T[]) => void;
 

@@ -1,4 +1,4 @@
-import { autobind, Component, Project, ProjectStatus } from "./common.js";
+import { autobind, Component, Project, ProjectStatus } from "./index.js";
 import { ProjectItem } from "./project-item.js";
 import { projectState } from "./project-state.js";
 

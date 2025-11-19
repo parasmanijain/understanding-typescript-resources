@@ -1,4 +1,4 @@
-import { autobind, Component, Project } from "./common.js";
+import { autobind, Component, Project } from "./index.js";
 
 interface Draggable {
   dragStartHandler(event: DragEvent): void;

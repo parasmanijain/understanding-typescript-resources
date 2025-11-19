@@ -1,4 +1,4 @@
-import { autobind, Component } from "./common.js";
+import { autobind, Component } from "./index.js";
 import { projectState } from "./project-state.js";
 
 // Validation
