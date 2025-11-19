@@ -21,4 +21,4 @@ let mathResults: Results<Operations> = {
   subtract: mathOperations.subtract(5, 2),
 };
 
-mathResults.add = 10;
+//mathResults.add = 10;
