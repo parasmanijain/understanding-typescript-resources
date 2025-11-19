@@ -1,4 +1,9 @@
-import { ProjectStatus } from "./models.js";
+
+// Project Type
+export enum ProjectStatus {
+  Active,
+  Finished,
+}
 
 export class Project {
   constructor(
@@ -48,4 +53,17 @@ export abstract class Component<T extends HTMLElement, U extends HTMLElement> {
 
   abstract configure(): void;
   abstract renderContent(): void;
+}
+
+// autobind decorator
+export function autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
+  const originalMethod = descriptor.value;
+  const adjDescriptor: PropertyDescriptor = {
+    configurable: true,
+    get() {
+      const boundFn = originalMethod.bind(this);
+      return boundFn;
+    },
+  };
+  return adjDescriptor;
 }

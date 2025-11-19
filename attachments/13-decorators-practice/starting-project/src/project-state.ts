@@ -1,8 +1,8 @@
-import { Project } from "./common.js";
-import { Listener, ProjectStatus } from "./models.js";
+import { Project, ProjectStatus } from "./common.js";
+
+export type Listener<T> = (items: T[]) => void;
 
 // Project State Management
-
 class State<T> {
   protected listeners: Listener<T>[] = [];
 

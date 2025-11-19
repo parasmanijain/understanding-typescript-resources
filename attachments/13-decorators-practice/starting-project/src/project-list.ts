@@ -1,8 +1,12 @@
-import { Component, Project } from "./common.js";
-import { autobind } from "./decorators.js";
-import { DragTarget, ProjectStatus } from "./models.js";
+import { autobind, Component, Project, ProjectStatus } from "./common.js";
 import { ProjectItem } from "./project-item.js";
 import { projectState } from "./project-state.js";
+
+interface DragTarget {
+  dragOverHandler(event: DragEvent): void;
+  dropHandler(event: DragEvent): void;
+  dragLeaveHandler(event: DragEvent): void;
+}
 
 // ProjectList Class
 export class ProjectList

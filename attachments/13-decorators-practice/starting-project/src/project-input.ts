@@ -1,7 +1,15 @@
-import { Component } from "./common.js";
-import { autobind } from "./decorators.js";
-import { Validatable } from "./models.js";
+import { autobind, Component } from "./common.js";
 import { projectState } from "./project-state.js";
+
+// Validation
+interface Validatable {
+  value: string | number;
+  required?: boolean;
+  minLength?: number;
+  maxLength?: number;
+  min?: number;
+  max?: number;
+}
 
 function validate(validatableInput: Validatable) {
   let isValid = true;

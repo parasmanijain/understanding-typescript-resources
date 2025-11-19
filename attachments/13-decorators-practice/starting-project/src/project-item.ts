@@ -1,6 +1,9 @@
-import { Component, Project } from "./common.js";
-import { autobind } from "./decorators.js";
-import { Draggable } from "./models.js";
+import { autobind, Component, Project } from "./common.js";
+
+interface Draggable {
+  dragStartHandler(event: DragEvent): void;
+  dragEndHandler(event: DragEvent): void;
+}
 
 // ProjectItem Class
 export class ProjectItem
