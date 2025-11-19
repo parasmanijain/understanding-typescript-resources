@@ -12,9 +12,13 @@ const dbSource: DBSource = {
 
 type Source = FileSource | DBSource;
 
+function isFile(source: Source) {
+  return source.type === 'file';
+}
+
 function loadData(source: Source) {
   // if ('path' in source) {
-  if (source.type === 'file') {
+  if (isFile(source)) {
     // source.path
     // source.path; => use that to open the file
     return;
@@ -44,5 +48,10 @@ const admin = new Admin(['ban', 'restore']);
 type Entity = User | Admin;
 
 function init(entity: Entity) {
- // .join() OR .scan() ...
+  if (entity instanceof User) {
+    entity.join();
+    return;
+  }
+
+  entity.scan();
 }
